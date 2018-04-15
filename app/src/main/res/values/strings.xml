@@ -1,15 +1,36 @@
 <resources>
-    <string name="app_name">FragmentApp</string>
+    <string name="app_name">Comida Chatarra</string>
 
-    <string-array name="Planets">
-        <item>Sun</item>
-        <item>Mercury</item>
-        <item>Venus</item>
-        <item>Earth</item>
-        <item>Mars</item>
-        <item>Jupiter</item>
-        <item>Saturn</item>
-        <item>Uranus</item>
-        <item>Neptune</item>
+    <string-array name="Nombre_Comida">
+        <item>Hamburguesa</item>
+        <item>Pizza</item>
+        <item>Tacos</item>
+        <item>Salsa ketchup</item>
+        <item>Pollo asado</item>
+        <item>Papas fritas</item>
+        <item>Donas</item>
+        <item>Hot dog</item>
+    </string-array>
+
+    <string-array name="Calorias_Array">
+        <item>295</item>
+        <item>266</item>
+        <item>226</item>
+        <item>112</item>
+        <item>147</item>
+        <item>312</item>
+        <item>452</item>
+        <item>290</item>
+    </string-array>
+
+    <string-array name="Colesterol_Array">
+        <item>47 mg</item>
+        <item>17 mg</item>
+        <item>28 mg</item>
+        <item>0 mg</item>
+        <item>54 mg</item>
+        <item>0 mg</item>
+        <item>19 mg</item>
+        <item>77 mg</item>
     </string-array>
 </resources>

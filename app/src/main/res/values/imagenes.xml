@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="pictures_array">
+        <item>@drawable/hamburguesa</item>
+        <item>@drawable/pizza</item>
+        <item>@drawable/tacos</item>
+        <item>@drawable/ketchup</item>
+        <item>@drawable/polloasado</item>
+        <item>@drawable/papas</item>
+        <item>@drawable/donas</item>
+        <item>@drawable/hotdog</item>
+    </array>
+
+</resources>
