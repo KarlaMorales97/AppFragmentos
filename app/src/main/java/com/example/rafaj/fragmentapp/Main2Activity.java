@@ -27,7 +27,7 @@ public class Main2Activity extends AppCompatActivity {
         imagen = findViewById(R.id.imagen_comidas);
 
         Intent callingIntent = this.getIntent();
-        bundle =callingIntent.getExtras();
+        bundle = callingIntent.getExtras();
 
 
         Comidas comida = (Comidas)bundle.getSerializable("FOODKEY");
@@ -42,6 +42,8 @@ public class Main2Activity extends AppCompatActivity {
         imagen.setImageDrawable(drawable);
 
 
+        String intentAction = callingIntent.getAction();
+        String intentType = callingIntent.getType();
     }
 
 }

@@ -22,17 +22,6 @@ import java.util.ArrayList;
 
 public class FragmentList extends ListFragment implements AdapterView.OnItemClickListener{
 
-        ArrayList<Comidas> arreglo = new ArrayList<Comidas>();
-        Comidas Objeto_comida;
-        Comidas Hamburguesa;
-        Comidas Pizza;
-        Comidas Tacos;
-        Comidas Salsa_ketchup;
-        Comidas pollo_asado;
-        Comidas papas_fritas;
-        Comidas donas;
-        Comidas got_dog;
-
         private String[] Nombre;
         private String[] Calorias;
         private String[] Colesterol;
@@ -45,7 +34,7 @@ public class FragmentList extends ListFragment implements AdapterView.OnItemClic
             Nombre = getResources().getStringArray(R.array.Nombre_Comida);
             Calorias = getResources().getStringArray(R.array.Calorias_Array);
             Colesterol = getResources().getStringArray(R.array.Colesterol_Array);
-            imagen = getResources().getStringArray(R.array.pictures_array);
+            imagen = getResources().getStringArray(R.array.num);
             return view;
 
         }
@@ -75,9 +64,10 @@ public class FragmentList extends ListFragment implements AdapterView.OnItemClic
                 startActivity(newIntent);
             }else if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE){
 
+
+                FragmentViewer frag = new FragmentViewer();
                 Bundle bundle = new Bundle();
                 bundle.putSerializable("FOODKEY",comiditas);
-                FragmentViewer frag = new FragmentViewer();
                 frag.setArguments(bundle);
 
                 final FragmentManager fragmentManager = getFragmentManager();

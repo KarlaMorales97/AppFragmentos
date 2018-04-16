@@ -13,24 +13,35 @@
     </string-array>
 
     <string-array name="Calorias_Array">
-        <item>295</item>
-        <item>266</item>
-        <item>226</item>
-        <item>112</item>
-        <item>147</item>
-        <item>312</item>
-        <item>452</item>
-        <item>290</item>
+        <item>Contiene 295 calorias</item>
+        <item>Contiene 266 calorias</item>
+        <item>Contiene 226 calorias</item>
+        <item>Contiene 112 calorias</item>
+        <item>Contiene 147 calorias</item>
+        <item>Contiene 312 calorias</item>
+        <item>Contiene 452 calorias</item>
+        <item>Contiene 290 calorias</item>
     </string-array>
 
     <string-array name="Colesterol_Array">
-        <item>47 mg</item>
-        <item>17 mg</item>
-        <item>28 mg</item>
-        <item>0 mg</item>
-        <item>54 mg</item>
-        <item>0 mg</item>
-        <item>19 mg</item>
-        <item>77 mg</item>
+        <item>El colesterol es de 47 mg</item>
+        <item>El colesterol es de 17 mg</item>
+        <item>El colesterol es de 28 mg</item>
+        <item>El colesterol es de 0 mg</item>
+        <item>El colesterol es de 54 mg</item>
+        <item>El colesterol es de 0 mg</item>
+        <item>El colesterol es de 19 mg</item>
+        <item>El colesterol es de 77 mg</item>
+    </string-array>
+
+    <string-array name="num">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
     </string-array>
 </resources>
