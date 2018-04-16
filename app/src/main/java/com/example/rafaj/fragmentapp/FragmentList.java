@@ -22,12 +22,16 @@ import java.util.ArrayList;
 
 public class FragmentList extends ListFragment implements AdapterView.OnItemClickListener{
 
-
+        ArrayList<Comidas> arreglo = new ArrayList<Comidas>();
         Comidas Objeto_comida;
         Comidas Hamburguesa;
         Comidas Pizza;
         Comidas Tacos;
-        Comidas Salsa_ketchup, pollo_asado, papas_fritas, donas,got_dog;
+        Comidas Salsa_ketchup;
+        Comidas pollo_asado;
+        Comidas papas_fritas;
+        Comidas donas;
+        Comidas got_dog;
 
         private String[] Nombre;
         private String[] Calorias;
@@ -51,7 +55,7 @@ public class FragmentList extends ListFragment implements AdapterView.OnItemClic
         public void onActivityCreated(Bundle savedInstanceState) {
             super.onActivityCreated(savedInstanceState);
             ArrayAdapter adapter = ArrayAdapter.createFromResource(getActivity(),
-                    R.array.Comidas, android.R.layout.simple_list_item_1);;
+                    R.array.Nombre_Comida, android.R.layout.simple_list_item_1);;
             setListAdapter(adapter);
             getListView().setOnItemClickListener(this);
 
@@ -60,19 +64,23 @@ public class FragmentList extends ListFragment implements AdapterView.OnItemClic
         @Override
         public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
             //Toast.makeText(getActivity(), "Item: " + adapterView.getItemAtPosition(i).toString(), Toast.LENGTH_SHORT).show();
+            Comidas comiditas = new Comidas(Nombre[i], Calorias[i], Colesterol[i], imagen[i]);
+
 
             if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT){
                 Intent newIntent = new Intent(getActivity().getApplicationContext(), Main2Activity.class);
-                newIntent.setAction(Intent.ACTION_SEND);
-                newIntent.putExtra(Intent.EXTRA_TEXT, adapterView.getItemAtPosition(i).toString());
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("FOODKEY", comiditas);
+                newIntent.putExtras(bundle);
                 startActivity(newIntent);
             }else if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE){
 
                 Bundle bundle = new Bundle();
+                bundle.putSerializable("FOODKEY",comiditas);
                 FragmentViewer frag = new FragmentViewer();
                 frag.setArguments(bundle);
 
-                FragmentManager fragmentManager = getFragmentManager();
+                final FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
                 fragmentTransaction.replace(R.id.viewer, frag);
